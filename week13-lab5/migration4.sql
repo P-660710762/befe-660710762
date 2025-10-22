@@ -18,7 +18,7 @@ CREATE INDEX idx_refresh_tokens_expires ON refresh_tokens(expires_at);
 CREATE TABLE audit_logs (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
-    action VARCHAR(100) NOT NULL,  -- 'login', 'logout', 'create', 'update', 'delete'
+    action VARCHAR(100) NOT NULL,  --- 'login', 'logout', 'create', 'update', 'delete'
     resource VARCHAR(50),           -- 'books', 'users', 'roles'
     resource_id VARCHAR(50),
     details JSONB,

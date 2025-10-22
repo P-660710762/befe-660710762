@@ -75,7 +75,7 @@ SELECT
 FROM permissions
 WHERE action = 'read';
 
--- User books:read
+--- User books:read
 INSERT INTO role_permissions (role_id, permission_id)
 SELECT
     (SELECT id FROM roles WHERE name = 'user'),
