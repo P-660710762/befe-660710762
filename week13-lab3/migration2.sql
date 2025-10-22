@@ -44,7 +44,7 @@ SELECT
     (SELECT id FROM users WHERE username = 'poohkan'),
     (SELECT id FROM roles WHERE name = 'editor');
 
---- regular user >> user role
+--- regular user >> user role  change
 INSERT INTO user_roles (user_id, role_id)
 SELECT
     (SELECT id FROM users WHERE username = 'nuttachot'),
